@@ -1,0 +1,64 @@
+.featuredInfoContainer {
+    padding: 10px;
+    width: 100%;
+    
+
+    .featuredItem {
+        flex: 1;
+        padding: 30px;
+        border-radius: 10px;
+        cursor: pointer;
+        -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        transition: 600ms ease-in-out;
+
+    &:hover{
+        transform: translateY(-5px);
+        -webkit-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 8px 15px -10px rgba(0, 0, 0, 0.75);
+    }
+        
+    }
+
+    .featuredTitle {
+        font-size: 20px;
+    }
+
+    .featuredValue {
+        font-size: 30px;
+        font-weight: 600;
+        margin-top: 10px;
+    }
+
+    .featuredSubtitle {
+        font-size: 15px;
+        color: grey;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .featuredInfoContainer{
+        .featuredItem{
+            padding: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .featuredInfoContainer{
+        .featuredItem{
+            padding: 10px;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 450px) {
+    .featuredInfoContainer{
+        padding: 0;
+    }
+}

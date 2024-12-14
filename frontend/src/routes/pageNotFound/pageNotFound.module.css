@@ -1,0 +1,24 @@
+.pageNotFoundContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    gap: 20px;
+    background-color: rgba(236, 234, 234, 0.67);
+
+    .pageNotFoundIcon{
+        font-size: 284px;
+    }
+
+    .pageCode{
+        font-size: 84px;
+        font-weight: 600;
+    }
+
+    .pageMessage{
+        font-size: 36px;
+        font-weight: 400;
+    }
+}

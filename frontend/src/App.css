@@ -1,0 +1,13 @@
+.App {
+  /* font-family: 'DM Sans'; */
+  max-width: 1800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.mySelect__value-container{
+  height: 56px;
+ }
+
+

@@ -1,0 +1,246 @@
+.taskDetailContainer {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+
+    .errorMessage {
+        color: red;
+        font-size: 12px;
+    }
+
+    .taskTopContainer,
+    .taskBottomContainer {
+        padding: 20px;
+        margin: 20px;
+        -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    }
+
+    .taskTopContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .nameDiv {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .taskName {
+            font-size: 24px;
+            padding: 10px 0;
+        }
+
+        .statusDiv {
+            padding-right: 40px;
+
+            span {
+                display: block;
+                font-weight: bold;
+                font-size: 18px;
+
+                &:first-child {
+                    text-decoration: underline;
+                }
+
+                &:last-child {
+                    margin-top: 10px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    border-radius: 5px;
+                    padding: 8px 15px;
+                }
+            }
+        }
+
+        .lhs {
+            align-self: start;
+
+            .taskDescription {
+                font-size: 14px;
+                font-weight: 400;
+                padding-left: 10px;
+                padding-bottom: 30px;
+            }
+
+            .taskInfoDivs {
+                width: 350px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .taskInfoDiv {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: 0.5px solid rgba(178, 177, 177, 0.525);
+                    padding-bottom: 5px;
+
+                    .taskInfoKey {
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: #101010;
+                    }
+
+                    .taskInfoValue {
+                        font-size: 16px;
+                        color: rgb(97, 97, 97);
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    .taskBottomContainer {
+        .addTaskForm {
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .addTaskItem {
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            margin-right: 20px;
+            padding: 20px;
+        }
+
+        .addTaskItem>label {
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: gray;
+        }
+
+        .addTaskItem>input {
+            padding: 10px;
+            border: none;
+            border-bottom: 0.5px solid gray;
+        }
+
+        .addTaskItem>select {
+            padding: 10px;
+        }
+
+        .buttonsContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            padding-top: 10px;
+
+            .addTaskButton {
+                transform: translateX(-80px);
+                border: none;
+                background-color: darkblue;
+                color: white;
+                padding: 10px 15px;
+                border-radius: 10px;
+                cursor: pointer;
+                font-weight: 600;
+                gap: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: 500ms ease-in-out;
+
+                &:hover {
+                    background-color: rgba(24, 24, 251, 0.896);
+                }
+
+                .editIcon,
+                .deleteIcon {
+                    font-size: 18px;
+                }
+            }
+
+        }
+
+
+    }
+
+    .completed {
+        background-color: green;
+        color: #fff;
+    }
+
+    .overdue {
+        background-color: rgba(234, 23, 23, 0.873);
+    }
+
+    .pending {
+        background-color: rgba(208, 208, 31, 0.836);
+        color: #000;
+    }
+
+    .lateCompleted {
+        background-color: rgb(215, 83, 27);
+        color: #fff;
+    }
+
+    .upcoming {
+        background-color: gray;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .taskDetailContainer {
+        padding: 0px;
+
+        .taskBottomContainer {
+            padding: 10px;
+            margin: 10px;
+
+            .addTaskItem {
+                margin-right: 0;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .taskDetailContainer {
+        .taskBottomContainer .addTaskForm {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .taskTopContainer {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .taskTopContainer .lhs{
+            width: 100%;
+        }
+
+        .taskTopContainer .lhs .taskInfoDivs {
+            width: 100%;
+        }
+
+        .taskBottomContainer .buttonsContainer .addTaskButton {
+            transform: translateX(0px);
+        }
+
+        .taskBottomContainer .addTaskItem {
+            max-width: 300px;
+        }
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .taskDetailContainer {
+       
+
+        .taskBottomContainer .buttonsContainer {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+}

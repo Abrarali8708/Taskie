@@ -1,0 +1,72 @@
+.taskFormContainer {
+
+    .loginErrorDiv{
+        text-align: center;
+        width: 70%;
+        margin: auto;
+        background-color: rgba(244, 40, 40, 0.692);
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+
+    .errorMessage{
+        color: red;
+        font-size: 12px;
+    }
+    .addTaskForm {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .addTaskItem {
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+        padding: 20px;
+    }
+
+    .addTaskItem>label {
+        margin-bottom: 10px;
+        font-weight: 600;
+        color: gray;
+    }
+
+    .addTaskItem>input {
+        padding: 10px;
+    }
+
+    .addTaskItem>select {
+        padding: 10px;
+    }
+
+    .addTaskButton {
+        margin: auto;
+        border: none;
+        background-color: darkblue;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: 500ms ease-in-out;
+
+        &:hover{
+            background-color: rgba(24, 24, 251, 0.896);
+        }
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .taskFormContainer{
+        .addTaskItem{
+            margin-right: 0;
+            padding: 10px;
+        }
+    }
+}
+

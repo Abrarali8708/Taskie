@@ -1,0 +1,37 @@
+.tableRowContainer {
+    .notCompleted,.statusDiv {
+        width: fit-content;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto auto;
+        background-color: rgb(238, 55, 55);
+        color: #fff;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .completed{
+        background-color: green;
+    }
+
+    .overdue{
+        background-color: rgba(234, 23, 23, 0.873);
+    }
+
+    .pending{
+        background-color: rgb(208, 208, 31);
+        color: #000;
+    }
+
+    .lateCompleted{
+        background-color: rgb(215, 83, 27);
+    }
+
+    .upcoming{
+        background-color: gray;
+    }
+}

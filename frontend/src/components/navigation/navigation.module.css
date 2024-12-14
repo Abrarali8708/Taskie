@@ -1,0 +1,122 @@
+.navigationContainer {
+    position: relative;
+    /* height: 50px; */
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+
+        .menuButton{
+            display: none;
+        }
+
+        .logoImg {
+            height: 40px;
+            width: 40px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: 400ms ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        .rhs {
+            padding: 0px 20px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            .addIconDiv,
+            .helpIconDiv {
+                font-size: 20px;
+                cursor: pointer;
+                color: #fff;
+                height: 30px;
+                width: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background-color: orange;
+                transition: 400ms ease;
+
+                &:hover{
+                    transform: scale(1.18);
+                }
+            }
+
+            .addIconDiv {
+                background: linear-gradient(225deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888cd 100%);
+            }
+
+            .helpIconDiv {
+                background-color: #fff;
+                border: 1px solid gray;
+                color: gray;
+            }
+
+            .profileDiv {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .lhs{
+            padding: 0px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .lhs p {
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+    }
+
+    .mainDiv {
+        display: flex;
+        padding-top: 80px;
+        
+        .sidebarDiv{
+            flex:2;
+        }
+
+        .outletDiv{
+            flex:9;
+            overflow-x: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navigationContainer{
+        .navbar{
+            .menuButton{
+                display: block;
+                font-size: 36px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navigationContainer{
+        .navbar .lhs,.navbar .rhs{
+            padding: 0px 10px;
+            gap: 10px;
+        }
+    }
+}

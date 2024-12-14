@@ -1,0 +1,73 @@
+.taskListContainer{
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .filtersDiv{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        align-items: center;
+        gap: 20px;
+        /* height: 80px; */
+
+        .filterDiv{
+            flex:1;
+            height: 100%;
+
+            .innerDiv{
+                display: flex;
+                height: 100%;
+                border: none;
+                align-items: flex-end;
+                .dateInput{
+                    width: 100%;
+                    padding: 20px 20px;
+                    border-radius: 5px;
+                    border: 0.5px solid rgba(128, 128, 128, 0.695);
+    
+                }
+            }
+        }
+
+        .userSelect{
+            height: 100%;
+        }
+
+    }
+
+    .separator{
+        border-bottom: 1px solid rgba(188, 186, 186, 0.674);
+    }
+
+    .taskListDiv{
+        border: 1px solid rgba(128, 128, 128, 0.695);
+        height: 100%;
+        overflow-x: auto;
+    }
+
+    .pagination{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 30px;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .taskListContainer{
+        .filtersDiv{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .taskListContainer{
+        .filtersDiv{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+    
+}

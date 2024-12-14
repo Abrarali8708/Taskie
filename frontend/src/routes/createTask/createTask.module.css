@@ -1,0 +1,9 @@
+.createTaskContainer{
+    padding: 10px 40px;
+}
+
+@media screen and (max-width:470px) {
+    .createTaskContainer{
+        padding: 10px 20px;
+    }
+}
