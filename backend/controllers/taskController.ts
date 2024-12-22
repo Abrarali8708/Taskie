@@ -233,7 +233,7 @@ export const getTasksByUser = async (req: authenticatedRequest, res: Response, n
         }
 
         const totalSize = await totalSizeQuery;
-        if (totalSize.length <= (currentPage - 1) * itemsPerPage) {
+        if (totalSize.length < (currentPage - 1) * itemsPerPage) {
             return res.status(422).json('Page not found');
         }
         const tasks: (Tasks & { updatedStatus?: string })[] = await tasksQuery;
