@@ -37,7 +37,7 @@ const Navigation = () => {
         return () => window.removeEventListener('resize',handleresize);
     },[])
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-        setAnchorEl(event.currentTarget);
+        setAnchorEl(null);
     };
     const handleClose = () => {
         setAnchorEl(null);
